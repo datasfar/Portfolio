@@ -38,6 +38,8 @@ class ArticleState(rx.State):
     filter_text: str = ""
 
     def call_filter(self, filter: str):
-
+        """
+        Método para actualizar el texto del filtro y aplicar el filtro a los artículos.
+        """
         self.filter_text = filter
         self.filter_articles(filter)

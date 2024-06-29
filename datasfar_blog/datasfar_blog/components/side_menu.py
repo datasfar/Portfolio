@@ -2,6 +2,7 @@ import reflex as rx
 
 from datasfar_blog.states.CourseState import CourseState
 
+
 def side_menu() -> rx.Component:
     return rx.drawer.root(
     rx.drawer.trigger(rx.card(rx.icon("arrow-right-from-line")),position="absolute",
@@ -24,6 +25,10 @@ def side_menu() -> rx.Component:
             height="100%",
             width="35vw",
             padding="2em",
+            background=rx.color_mode_cond(
+                light="#ffffff",
+                dark="#111113"
+            ),
         ),
         border="none !important"
     ),
@@ -32,13 +37,11 @@ def side_menu() -> rx.Component:
 
 def index_card(section:dict) -> rx.Component:
     return rx.card(
-        rx.link(
-            rx.text(section["title"]),
-            href=f"#{section["link"]}"
-        ),
+        rx.text(section["title"]),
         rx.checkbox(),
         display="flex",
         justify_content="space-between",
         align_items="end",
-        width="100%"
+        width="100%",
+        on_click=CourseState.change_current_lesson(section["lesson"])
     )

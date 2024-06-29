@@ -5,12 +5,16 @@ from datasfar_blog.components.side_menu import side_menu
 
 from datasfar_blog.states.CourseState import CourseState
 
-@rx.page(route="/curso/python-para-ciencia-de-datos")
+class LessonState(rx.State):
+    ...
+    
+@rx.page(route="/curso/python-para-ciencia-de-datos",
+         on_load=CourseState.load_lesson)
 def python_for_ds():
-        return rx.container(
-                header(),
-                side_menu(),
-                rx.markdown(
-                    CourseState.load_content
-                ),
-        )
+    return rx.container(
+        header(),
+        side_menu(),
+        rx.markdown(
+            CourseState.lesson_content
+        ),
+    )
