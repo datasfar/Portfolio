@@ -6,24 +6,34 @@ class CourseState(rx.State):
     # Cada diccionario contiene información sobre una lección
     course_index: list[dict] = [
         {
-            "title": "Introducción a la estadistica descriptiva",
+            "title": "1. Tipos de datos en Python",
             "link": "/",
-            "lesson": "lesson-1"
+            "lesson": "1_tipos"
         },
         {
-            "title": "Conceptos clave de estadista con python",
+            "title": "2. Uso de fechas y horas",
             "link": "/",
-            "lesson": "lesson-2"
+            "lesson": "2_fechas_y_horas"
         },
         {
-            "title": "Introducción a la estadistica descriptiva",
+            "title": "3. Funciones en Python",
             "link": "/",
-            "lesson": "lesson-1"
+            "lesson": "3_funciones"
         },
         {
-            "title": "Conceptos clave de estadista con python",
+            "title": "4. Cargar datos de un archivo CSV",
             "link": "/",
-            "lesson": "lesson-2"
+            "lesson": "4_ejemplo_csv"
+        },
+        {
+            "title": "5. Uso básico de Numpy",
+            "link": "/",
+            "lesson": "5_numpy"
+        },
+        {
+            "title": "6. Expresiones regulares REGEX",
+            "link": "/",
+            "lesson": "6_regex"
         },
     ]
 
@@ -31,7 +41,7 @@ class CourseState(rx.State):
     markdown_content: str = ""
     
     # Variable para almacenar el identificador de la lección actual
-    current_lesson: str = "lesson-1"
+    current_lesson: str = "1_tipos"
 
     def load_lesson(self):
         """
