@@ -15,9 +15,9 @@ def header() -> rx.Component:
             align="center"
         ),
         rx.stack(
-            rx.link(rx.icon("linkedin", size=34, style=styles.SOCIAL_LINKS)),
-            rx.link(rx.icon("github", size=34, style=styles.SOCIAL_LINKS)),
-            rx.link(rx.icon("instagram", size=34, style=styles.SOCIAL_LINKS)),
+            rx.link(rx.icon("linkedin", size=34, style=styles.SOCIAL_LINKS), href="https://www.linkedin.com/in/francisco-alcaide/"),
+            rx.link(rx.icon("github", size=34, style=styles.SOCIAL_LINKS), href="https://github.com/datasfar"),
+            rx.link(rx.icon("instagram", size=34, style=styles.SOCIAL_LINKS), href="https://www.instagram.com/datasfar?igsh=MTl0aTU5bHJzdGl3bw=="),
         ),
         justify="between",
         align="center",

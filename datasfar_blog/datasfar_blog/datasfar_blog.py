@@ -11,7 +11,7 @@ from datasfar_blog.pages.post import post
 
 from datasfar_blog.pages.courses import courses
 from datasfar_blog.pages.all_courses.python_for_ds import python_for_ds
-from datasfar_blog.pages.all_courses.maths_for_ds import maths_for_ds
+from datasfar_blog.pages.all_courses.pandas import pandas
 
 # styles
 import datasfar_blog.styles.styles as styles
@@ -33,6 +33,6 @@ app.add_page(post)
 
 app.add_page(courses)
 app.add_page(python_for_ds)
-app.add_page(maths_for_ds)
+app.add_page(pandas)
 
 

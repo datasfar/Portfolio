@@ -3,7 +3,7 @@ import reflex as rx
 from datasfar_blog.states.CourseState import CourseState
 
 
-def side_menu() -> rx.Component:
+def side_menu(menu:list[dict]) -> rx.Component:
     return rx.drawer.root(
     rx.drawer.trigger(rx.card(rx.icon("arrow-right-from-line")),position="absolute",
                               top="10px",
@@ -15,7 +15,7 @@ def side_menu() -> rx.Component:
                 rx.drawer.close(rx.card(rx.icon("arrow-left-to-line")),
                                 align_self="end"),
                 rx.foreach(
-                    CourseState.course_index,
+                    menu,
                     index_card
                 ),
                 width="100%",
@@ -38,10 +38,9 @@ def side_menu() -> rx.Component:
 def index_card(section:dict) -> rx.Component:
     return rx.card(
         rx.text(section["title"]),
-        rx.checkbox(),
         display="flex",
         justify_content="space-between",
         align_items="end",
         width="100%",
-        on_click=CourseState.change_current_lesson(section["lesson"])
+        on_click=CourseState.change_current_lesson(section["lesson"], section["course"])
     )
