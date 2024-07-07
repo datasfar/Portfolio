@@ -5,7 +5,7 @@ from datasfar_blog.components.course_card import course_card
 def courses() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.heading("Cursos"),
+            rx.heading("Notebooks"),
             rx.link("Ver todos", 
                     rx.icon("move-right", margin_left="1em"),
                     display="flex",
@@ -21,13 +21,13 @@ def courses() -> rx.Component:
             course_card("/courses_images/python.png",
                  "/curso/python-para-ciencia-de-datos", 
                  "Python para Ciencia de Datos", 
-                 "Uso básico de pandas: indexación, consultas, limpiado de valores nulos, merge() y concat, codigo limpio y convenciones.",
-                 ["Pandas", "Python", "Numpy"]),
+                 "Una pequeña introducción al uso de python enfocado a la ciencia de datos: documentos csv, regex y numpy. Requiere conocimientos básicos sobre python.",
+                 ["Python", "Numpy", "DS"]),
             course_card("/courses_images/math.png",
                  "/curso/introduccion-a-pandas", 
                  "Introducción a Pandas", 
-                 "Ejemplo de un ejercicio de limpieza y analisis de datos. Se analizan los aspecto demograficos y financieros de un grupo.",
-                 ["Pandas", "MatploitLib"]),
+                 "Uso básico de pandas, la librería de python más usada en ciencia de datos: dataframes y series, indexación, consultas, datos faltantes...",
+                 ["Pandas", "Python"]),
             gap="5",
             columns=[1, 1, 2, 2, 2],
         ),
