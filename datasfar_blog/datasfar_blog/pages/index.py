@@ -3,11 +3,13 @@ import reflex as rx
 # components
 from datasfar_blog.components.header import header
 from datasfar_blog.components.hero import hero
+from datasfar_blog.components.footer import footer
 
 # views
 from datasfar_blog.views.projects import projects
 from datasfar_blog.views.courses import courses
 from datasfar_blog.views.posts import posts
+
 
 
 def index() -> rx.Component:
@@ -18,4 +20,5 @@ def index() -> rx.Component:
         projects(),
         posts(),
         courses(),
+        footer()
     )
