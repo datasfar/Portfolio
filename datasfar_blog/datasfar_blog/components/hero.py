@@ -10,7 +10,7 @@ def hero() -> rx.Component:
             rx.image(src="avatar.png", border_radius="50%", width="100px"),
             rx.vstack(
                 rx.heading(" 👋 Hola! Soy Fran", margin_bottom="0"),
-                rx.text("Desarrollador Python y Data Scientist autodidacta. Tras muchos años tras los fogones tome la decidí dar un giro de 180º a mi vida y embarcarme en el mundo del desarrollo. Echa un vistazo a mi trabajo aquí."),
+                rx.text("Desarrollador Python y Data Scientist autodidacta. Después de muchos años tras los fogones, decidí dar un giro de 180º a mi vida y embarcarme en el mundo del desarrollo. Echa un vistazo a mi trabajo aquí."),
                 rx.chakra.responsive_grid(
                     rx.button(
                         rx.icon("circle", size=14, color="#82E0AA", stroke_width=2.5),

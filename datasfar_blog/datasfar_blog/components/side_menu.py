@@ -23,7 +23,7 @@ def side_menu(menu:list[dict]) -> rx.Component:
             top="auto",
             right="auto",
             height="100%",
-            width="35vw",
+            width="50vw",
             padding="2em",
             background=rx.color_mode_cond(
                 light="#ffffff",
