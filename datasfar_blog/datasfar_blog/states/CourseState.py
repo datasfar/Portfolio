@@ -80,8 +80,60 @@ class CourseState(rx.State):
             "lesson": "6_pandas_dataframe_V",
             "course": "pandas"
         },
+
     ]
     
+    course_3_index: list[dict] = [
+        {
+            "title": "1. Introducción a Bases de Datos",
+            "link": "/",
+            "lesson": "1_introduccion",
+            "course": "databases"
+        },
+        {
+            "title": "2. Introducción a SQL",
+            "link": "/",
+            "lesson": "2_sql",
+            "course": "databases"
+        },
+        {
+            "title": "3. Estructura básica de las bases de datos",
+            "link": "/",
+            "lesson": "3_estructura",
+            "course": "databases"
+        },
+        {
+            "title": "4. Tipos de datos SQL",
+            "link": "/",
+            "lesson": "4_tipos",
+            "course": "databases"
+        },
+        {
+            "title": "5. Crear y Leer",
+            "link": "/",
+            "lesson": "5_crear_y_leer",
+            "course": "databases"
+        },
+        {
+            "title": "6. Actualizar y Eliminar",
+            "link": "/",
+            "lesson": "6_actualizar_y_eliminar",
+            "course": "databases"
+        },
+        {
+            "title": "7. Operaciones SQL",
+            "link": "/",
+            "lesson": "7_operaciones",
+            "course": "databases"
+        },
+        {
+            "title": "8. Clasificación y filtrado de datos",
+            "link": "/",
+            "lesson": "8_clasificacion",
+            "course": "databases"
+        },
+    ]
+
     # Variable para almacenar el contenido del markdown de la lección actual
     markdown_content: str = ""
     
